@@ -54,5 +54,10 @@ public class KargoService {
 		
 		return takipNo;
 	}
+	
+	public String delete(Long id) {
+		repository.delete(repository.findById(id).orElse(null));
+		return "Silme işlemi başarılı";
+	}
 
 }
